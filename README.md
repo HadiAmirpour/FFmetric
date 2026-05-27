@@ -34,7 +34,7 @@ cd ffmpeg
 
 ./configure
 
-make -j8
+make -j
 ```
 
 
@@ -46,5 +46,10 @@ Example usage:
 
 Use all defaults and output to vca.csv
 ```ssh
-./ffmpeg -i input.mp4 -c:v libx264 -crf 28 -ffmetric output.mp4
+./ffmpeg -i input.mp4 -c:v libx264 -crf 28 -ffmetric 1 output.mp4
 ```
+
+
+## Example Output
+
+![FFmetric Example](images/example.jpg)
