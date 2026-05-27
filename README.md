@@ -46,5 +46,5 @@ Example usage:
 
 Use all defaults and output to vca.csv
 ```ssh
-./ffmpeg -i input.mp4 -c:v libx264 -ffmetric output.mp4
+./ffmpeg -i input.mp4 -c:v libx264 -crf 28 -ffmetric output.mp4
 ```
