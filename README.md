@@ -1,6 +1,6 @@
 # FFmetric
 
-[FFmetric](https://github.com/HadiAmirpour/FFmetric?utm_source=chatgpt.com) is an open-source perceptual video quality prediction framework integrated directly into FFmpeg/libx264. The primary objective of FFmetric is to provide lightweight and decoding-free perceptual quality estimation using encoder-side compression statistics in order to enable real-time quality monitoring, adaptive encoding, bitrate ladder generation, and large-scale transcoding applications without requiring decoded frames or reference videos.
+FFmetric is an open-source perceptual video quality prediction framework integrated directly into FFmpeg/libx264. The primary objective of FFmetric is to provide lightweight and decoding-free perceptual quality estimation using encoder-side compression statistics in order to enable real-time quality monitoring, adaptive encoding, bitrate ladder generation, and large-scale transcoding applications without requiring decoded frames or reference videos.
 
 
     
