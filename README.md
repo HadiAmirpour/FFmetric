@@ -1,6 +1,6 @@
 # FFmetric
 
-FFmetric is an open-source perceptual video quality prediction framework integrated into FFmpeg/libx264.
+FFmetric is an open-source perceptual video quality prediction framework integrated into FFmpeg.
 
 It provides lightweight, decoding-free perceptual quality estimation using encoder-side compression statistics. FFmetric can be used for real-time quality monitoring, adaptive encoding, bitrate ladder generation, and large-scale transcoding without requiring decoded frames or reference videos.
 
@@ -167,22 +167,6 @@ x264_encoder_close(x4->enc);
 ```
 
 because x264 emits its final encoding statistics during encoder closing.
-
-## Pipeline Diagram
-
-```mermaid
-flowchart LR
-	A["libx264 encoder<br/>X264_log() hook<br/>-ffmetric AVOption<br/>X264_init / X264_close"]
-	B["ffmetric_parse_x264_log<br/>sscanf / strncmp<br/>FFMetricContext"]
-	C["fill_features<br/>80-element<br/>double array"]
-	D["XGBoost inference<br/>100 trees, base 76.79<br/>ffmetric_xgb_model.h"]
-	E["av_log AV_LOG_INFO<br/>\"FFmetric: %.2f\""]
-
-	A -->|log lines| B
-	B -->|struct| C
-	C --> D
-	D -->|score| E
-```
 
 ## Repository Structure
 
